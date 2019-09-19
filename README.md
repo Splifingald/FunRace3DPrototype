@@ -44,4 +44,6 @@ Ce que je ferais pour aller plus loin :
 - Améliorer l'environnement du jeu (Skybox, matériaux, plateformes, obstacles, animations, sons).
 - Et bien d'autres choses auxquelles je n'ai pas encore eu le temps de penser.
 
-Je pense avoir répondu aux problématiques principales qui étaient posées dans un temps très restreint. Je n'ai pas trouvé l'exercice trop difficile mais cela m'a tout de même demandé un peu de réflexion.  
+Je pense avoir répondu aux problématiques principales qui étaient posées dans un temps très restreint. Je n'ai pas trouvé l'exercice trop difficile mais cela m'a tout de même demandé un peu de réflexion. 
+
+Ceci est une première ébauche, je continuerai surement le développement en début de semaine prochaine, à moins que cela ne soit suffisant.
