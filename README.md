@@ -61,3 +61,8 @@ Le fonctionnement de la camera est très basique et il aurait peut-être été p
 # Conclusion
 Je pense avoir répondu aux problématiques principales qui étaient posées dans un temps très restreint. Je n'ai pas trouvé l'exercice trop difficile mais cela m'a tout de même demandé un peu de réflexion. 
 Ceci est une première ébauche, je continuerai surement le développement en début de semaine prochaine, à moins que cela ne soit suffisant.
+
+# Bugs connus
+Il peut arriver que le personnage tourne tout seul après de multiples collisions. 
+Pour y remedier il suffirait de remplacer les colliders par des colliders "trigger"
+Pour reproduire rapidemment : Jouer en restant appuyé tout le temps, il faut un peu de patience, cela peut se produire rapidement ou au bout de plusieurs échecs.
