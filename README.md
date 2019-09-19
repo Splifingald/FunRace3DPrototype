@@ -1,4 +1,11 @@
 # FunRace3DPrototype
+
+Prototype réalisé sous Unity 2018.3.12f
+Compatible avec Android
+Même si cela n'est pas d'usage, j'ai conservé le Build du jeu au format .apk pour que tu puisses le tester directement sur téléphone.
+
+# Temps consacré et commentaires:
+
 J'ai mis 2h30 pour réaliser ce jeu
 Voici une répartition approximative du temps que j'ai passé sur les différents aspects du jeu, chacun comprennant une partie dédiée au test des fonctionnalités.
 
@@ -32,10 +39,13 @@ Level design : 20 minutes
 
 Comprend la création du sol et des obstacles ainsi que le paramétrage de ces divers objets.
 
+# Problèmes rencontrés
+
 Pour l'instant aucun point ne m'a réellement posé de difficultés, mais je pense avoir perdu un peu de temps sur le déplacement du personnage lorsque j'ai fait quelques essais avec les NavMesh.
 Le fonctionnement de la camera est très basique et il aurait peut-être été plus simple de la mettre directement en enfant du joueur. De plus, j'utilise "transform.LookAt()" sur la camera pour que celle ci regarde le joueur, cela a pour effet de le placer au centre de l'écran, cependant, étant donné que le joueur ne peut pas aller en arrière il lui est inutile de voir aussi loin derrière lui.
 
-Ce que je ferais pour aller plus loin :
+# Pour aller plus loin
+
 - Ajouter des patterns sur le sol, pour aider le joueur à repérer les éléments dans l'environnement 3D. L'appréhension de la profondeur pouvant être difficile.
 - Un niveau permettant de réellement se rendre compte des possibilités offertes par ma classe "Obstacle" avec des obstacles ayant des mouvements plus élaborés.
 - Améliorer la classe "Obstacle" notamment au niveau des rotations et peut être, ajouter d'autres types de mouvements.
@@ -44,6 +54,6 @@ Ce que je ferais pour aller plus loin :
 - Améliorer l'environnement du jeu (Skybox, matériaux, plateformes, obstacles, animations, sons).
 - Et bien d'autres choses auxquelles je n'ai pas encore eu le temps de penser.
 
+# Conclusion
 Je pense avoir répondu aux problématiques principales qui étaient posées dans un temps très restreint. Je n'ai pas trouvé l'exercice trop difficile mais cela m'a tout de même demandé un peu de réflexion. 
-
 Ceci est une première ébauche, je continuerai surement le développement en début de semaine prochaine, à moins que cela ne soit suffisant.
