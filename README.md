@@ -6,6 +6,8 @@ Compatible avec Android
 
 Même si cela n'est pas d'usage, j'ai conservé le Build du jeu au format .apk pour que tu puisses le tester directement sur téléphone.
 
+Ceci est une première ébauche, je continuerai surement le développement en début de semaine prochaine, à moins que cela ne soit suffisant.
+
 # Temps consacré et commentaires
 
 J'ai mis 2h30 pour réaliser ce jeu
