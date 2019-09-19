@@ -1,7 +1,9 @@
 # FunRace3DPrototype
 
-Prototype réalisé sous Unity 2018.3.12f \n
+Prototype réalisé sous Unity 2018.3.12f
+
 Compatible avec Android
+
 Même si cela n'est pas d'usage, j'ai conservé le Build du jeu au format .apk pour que tu puisses le tester directement sur téléphone.
 
 # Temps consacré et commentaires
