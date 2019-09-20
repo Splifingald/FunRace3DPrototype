@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
     /// <summary>
     /// Collision with an obstacle
     /// </summary>
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerStay(Collider col)
     {
         if (col.gameObject.CompareTag("Obstacle"))
         {
