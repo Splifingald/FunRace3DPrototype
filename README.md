@@ -65,4 +65,4 @@ Ceci est une première ébauche, je continuerai surement le développement en d�
 # Bugs connus
 Il peut arriver que le personnage tourne tout seul après de multiples collisions. 
 Pour y remedier il suffirait de remplacer les colliders par des colliders "trigger"
-Pour reproduire rapidemment : Jouer en restant appuyé tout le temps, il faut un peu de patience, cela peut se produire rapidement ou au bout de plusieurs échecs.
+Pour reproduire rapidemment : Jouer en restant appuyé tout le temps, il faut un peu de patience, cela peut se produire rapidement ou au bout de plusieurs échecs. Ce bug a été résolu sur Unity mais je n'ai pas rebuild l'apk.
