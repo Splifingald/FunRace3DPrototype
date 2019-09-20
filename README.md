@@ -63,6 +63,6 @@ Je pense avoir répondu aux problématiques principales qui étaient posées dan
 Ceci est une première ébauche, je continuerai surement le développement en début de semaine prochaine, à moins que cela ne soit suffisant.
 
 # Bugs connus
-Il peut arriver que le personnage tourne tout seul après de multiples collisions. 
+Il peut arriver que le personnage tourne tout seul après de multiples collisions, et que les collisions ne soient pas détéctées lorsque le joueur ne bouge pas.
 Pour y remedier il suffirait de remplacer les colliders par des colliders "trigger"
 Pour reproduire rapidemment : Jouer en restant appuyé tout le temps, il faut un peu de patience, cela peut se produire rapidement ou au bout de plusieurs échecs. Ce bug a été résolu sur Unity mais je n'ai pas rebuild l'apk.
