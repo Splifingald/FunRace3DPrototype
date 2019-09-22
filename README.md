@@ -4,30 +4,29 @@ Prototype réalisé sous Unity 2018.3.12f
 
 Compatible avec Android
 
-Même si cela n'est pas d'usage, j'ai conservé le Build du jeu au format .apk pour que tu puisses le tester directement sur téléphone.
+Même si cela n'est pas d'usage, j'ai conservé le Build du jeu au format .apk pour que le jeu puisse être testé directement sur téléphone.
 
-Ceci est une première ébauche, je continuerai surement le développement en début de semaine prochaine, à moins que cela ne soit suffisant.
+J'ai passé un total de 4h30 sur le développement de ce prototype.
 
 # Temps consacré et commentaires
 
-J'ai mis 2h30 pour réaliser ce jeu
 Voici une répartition approximative du temps que j'ai passé sur les différents aspects du jeu, chacun comprennant une partie dédiée au test des fonctionnalités.
 
-Analyse du jeu Fun Race 3D : 10 minutes
+Analyse du jeu Fun Race 3D : 15 minutes
 
 J'ai simplement téléchargé le jeu et joué en essayant de noter les aspects les plus importants du jeu, j'ai décidé de laisser de côté l'aspect multi-joueur.
 
-Déplacements du personnage et de la camera : 45 minutes
+Déplacements du personnage et de la camera : 1 heure
 
 Le personnage se déplace de point en point, la camera suit le joueur.
 Une autre méthode aurait pu être d'utiliser un NavMesh (ce qui permettrait de gagner du temps au niveau du paramétrage) et un agent de navigation sur le joueur, celui-ci aurait pu se déplacer automatiquement d'un point à un autre du niveau (avec I.A.). Cependant il ne serait pas nécessairement resté au centre du chemin pendant ses déplacements et l'utilisation d'algorithmes de path-finding est plus coûteuse que d'écrire les positions en dur.
 
-Déplacement des obstacles : 20 minutes
+Déplacement des obstacles : 30 minutes
 
-Les obstacles peuvent se déplacer suivant une liste de positions et peuvent tourner sur eux mêmes.
+Les obstacles peuvent se déplacer suivant une liste de positions et peuvent tourner sur eux mêmes ou changer de scale progressivement. (Bien que cette dernière fonctionnalité n'était pas présente dans les premiers niveaux de Fun Race 3D).
 Ici, de nombreuses améliorations restent à faire, on peut imaginer des obstacles en rotations qui n'effectuent pas forcement de révolutions complètes et qui, de la même manière que pour les positions, suivent une liste de rotations.
-
-Détection des collisions : 15 minutes
+J'ai souhaité pouvoir intervenir sur les trois composantes principales de la transform mais les possibilités restent limités avec mes scripts.
+15
 
 Lorsque le joueur touche un obstacle, il retourne au "checkpoint" précédent (pas nécessairement à la ligne de départ).
 
@@ -35,34 +34,40 @@ Animation : 35 minutes
 
 J'ai récupéré un asset sur l'asset store Unity pour le personnage, j'ai réalisé un nouvel Animator avec les animations données car l'Animator donné est plus complexe. J'ai effectué les appels correspondant dans le script du joueur et modifié la position de la caméra à l'arrivée.
 
-Management des scènes : 5 minutes
+Management des scènes : 10 minutes
 
 Sur cette version il n'y a qu'une scène disponible, et le niveau recommence en boucle après l'animation d'arrivée.
 
-Level design : 20 minutes
+Level design : 30 minutes
 
-Comprend la création du sol et des obstacles ainsi que le paramétrage de ces divers objets.
+Comprend la création du sol et des obstacles ainsi que le paramétrage de ces divers objets sur deux niveaux.
+
+Barre de progrès : 30 minutes
+
+J'ai utilisé les sliders pour afficher le progrès du joueur sur la barre supérieure.
+
+Menu principal : 15 minutes
+
+Affichage de deux boutons permettant de commencer le jeu ou de quitter. Si le jeu a déjà été commencé, le joueur reprendra au début du dernier niveau effectué.
+Ajout d'un bouton permettant de revenir au menu sur les scènes de jeu.
+
+Builds, tests sur téléphone et résolution de bugs : 25 minutes
 
 # Problèmes rencontrés
 
 Pour l'instant aucun point ne m'a réellement posé de difficultés, mais je pense avoir perdu un peu de temps sur le déplacement du personnage lorsque j'ai fait quelques essais avec les NavMesh.
-Le fonctionnement de la camera est très basique et il aurait peut-être été plus simple de la mettre directement en enfant du joueur. De plus, j'utilise "transform.LookAt()" sur la camera pour que celle ci regarde le joueur, cela a pour effet de le placer au centre de l'écran, cependant, étant donné que le joueur ne peut pas aller en arrière il lui est inutile de voir aussi loin derrière lui.
+Le fonctionnement de la camera est très basique et il aurait peut-être été plus simple de la mettre directement en enfant du joueur.
 
 # Pour aller plus loin
 
 - Ajouter des patterns sur le sol, pour aider le joueur à repérer les éléments dans l'environnement 3D. L'appréhension de la profondeur pouvant être difficile.
-- Un niveau permettant de réellement se rendre compte des possibilités offertes par ma classe "Obstacle" avec des obstacles ayant des mouvements plus élaborés.
-- Améliorer la classe "Obstacle" notamment au niveau des rotations et peut être, ajouter d'autres types de mouvements.
-- Comme dans le jeu de base, réaliser une barre de progression en haut de l'écran, cela renforce le sentiment d'avancement du joueur et l'aide à continuer malgré les potentiels échecs.
+- Ajouter des traits sur la barre de progrès permettant de voir les check points.
+- Améliorer la classe "Obstacle" pour avoir plus de possibilités, notamment au niveau des rotations ou encore pour ne pas être obligé d'avoir une vitesse constante.
 - Ajouter d'autres objets obstacles de différentes formes.
 - Améliorer l'environnement du jeu (Skybox, matériaux, plateformes, obstacles, animations, sons).
+- Ajouter la possibilité du multi-joueur. (Ce qui risque de prendre beaucoup plus de temps que le reste).
 - Et bien d'autres choses auxquelles je n'ai pas encore eu le temps de penser.
 
 # Conclusion
 Je pense avoir répondu aux problématiques principales qui étaient posées dans un temps très restreint. Je n'ai pas trouvé l'exercice trop difficile mais cela m'a tout de même demandé un peu de réflexion. 
-Ceci est une première ébauche, je continuerai surement le développement en début de semaine prochaine, à moins que cela ne soit suffisant.
-
-# Bugs connus
-Il peut arriver que le personnage tourne tout seul après de multiples collisions, et que les collisions ne soient pas détéctées lorsque le joueur ne bouge pas.
-Pour y remedier il suffirait de remplacer les colliders par des colliders "trigger"
-Pour reproduire rapidemment : Jouer en restant appuyé tout le temps, il faut un peu de patience, cela peut se produire rapidement ou au bout de plusieurs échecs. Ce bug a été résolu sur Unity mais je n'ai pas rebuild l'apk.
+Je vais surement continuer de créer quelques niveaux de mon côté et poster le jeu sur ma page itch.io.
