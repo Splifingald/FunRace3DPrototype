@@ -21,12 +21,27 @@ public class Obstacle : MonoBehaviour
     [SerializeField]
     private Vector3 rotationSpeed = new Vector3(1,0,0);
     private Vector3 initialRotation;
+    [SerializeField]
+    private bool scale;
+    [SerializeField]
+    private Vector3 initialScale = new Vector3(1,1,1);
+    [SerializeField]
+    private Vector3 finalScale = new Vector3(3,3,3);
+    [SerializeField]
+    [Range(0.5f, 100.0f)]
+    private float scaleSpeed = 2.0f;
 
     private int currentTargetPosition = 0;
+    private bool isScalingUp = true;
     #endregion
 
     private void Start()
     {
+        //Check parameters issues
+        if(transform.localScale != initialScale && scale)
+        {
+            transform.localScale = initialScale;
+        }
         initialRotation = transform.eulerAngles;
         if(positions.Count > 0)
             transform.position = positions[0];
@@ -36,6 +51,7 @@ public class Obstacle : MonoBehaviour
     {
         Move();
         Rotate();
+        Scale();
     }
 
     /// <summary>
@@ -70,6 +86,33 @@ public class Obstacle : MonoBehaviour
         {
             initialRotation = initialRotation + rotationSpeed * Time.fixedDeltaTime;
             transform.eulerAngles = initialRotation;
+        }
+    }
+
+    /// <summary>
+    /// Scaling the obstacle
+    /// </summary>
+    private void Scale()
+    {
+        if (scale)
+        {
+            if(Approximation.VectorsEqual(transform.localScale, finalScale, 0.1f))
+            {
+                isScalingUp = false;
+            }
+            else if(Approximation.VectorsEqual(transform.localScale, initialScale, 0.1f))
+            {
+                isScalingUp = true;
+            }
+
+            if (isScalingUp)
+            {
+                transform.localScale = Vector3.MoveTowards(transform.localScale, finalScale, scaleSpeed * Time.fixedDeltaTime);
+            }
+            else
+            {
+                transform.localScale = Vector3.MoveTowards(transform.localScale, initialScale, scaleSpeed * Time.fixedDeltaTime);
+            }
         }
     }
 }

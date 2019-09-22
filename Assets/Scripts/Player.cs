@@ -11,8 +11,7 @@ public class Player : MonoBehaviour
     /// </summary>
 
     #region Variables
-    [SerializeField]
-    private List<Vector3> positions = new List<Vector3>(); // First position is start pos, last is finish line
+    public List<Vector3> positions = new List<Vector3>(); // First position is start pos, last is finish line
     [SerializeField]
     [Range(1.0f,10.0f)]
     private float speed = 3.0f;
@@ -28,7 +27,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private string nextLevelName;
 
-    private int nextPositionId = 1;
+    public int nextPositionId = 1;
     //Number of elements in positions (so we don't have to calculate every time)
     private int posCount;
     #endregion
@@ -39,6 +38,7 @@ public class Player : MonoBehaviour
         cam.LookAt(transform);
         posCount = positions.Count;
         animator = GetComponent<Animator>();
+        PlayerPrefs.SetString("currentLevel",SceneManager.GetActiveScene().name);
     }
 
     private void FixedUpdate()
@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
             //Finish Line, make player wave and move camera, then start next Level
             cam.position = transform.position + transform.up * 4.0f + transform.forward * 3.0f;
             cam.LookAt(transform.position);
+            cam.eulerAngles += new Vector3(-20, 0, 0);
             animator.Play("wave");
             StartCoroutine("GoToNextSceneAfter", 3.0f);
         }
@@ -77,10 +78,7 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Obstacle"))
         {
-            //TODO Animate "death"
-            
-            //Return to last checkPoint and reset camera
-            transform.position = positions[nextPositionId -1];
+            transform.position = positions[nextPositionId - 1];
             cam.position = transform.position + transform.up * 5.0f + transform.forward * -5.0f;
             cam.LookAt(transform.position);
         }
@@ -118,7 +116,8 @@ public class Player : MonoBehaviour
     /// </summary>
     private void MoveCamera()
     {
-        cam.position = Vector3.MoveTowards(cam.position, transform.position + transform.up * 5.0f + transform.forward * -5.0f, Time.fixedDeltaTime * cameraSpeed);
+        cam.position = Vector3.MoveTowards(cam.position, transform.position + transform.up * 7.0f + transform.forward * -7.0f, Time.fixedDeltaTime * cameraSpeed);
         cam.LookAt(transform.position);
+        cam.transform.eulerAngles += new Vector3(-20,0,0); // So the player isn't in the middle of the screen
     }
 }
