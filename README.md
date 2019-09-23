@@ -32,7 +32,7 @@ Animation : 35 minutes
 
 J'ai récupéré un asset sur l'asset store Unity pour le personnage, j'ai réalisé un nouvel Animator avec les animations données car l'Animator donné est plus complexe. J'ai effectué les appels correspondant dans le script du joueur et modifié la position de la caméra à l'arrivée.
 
-Management des scènes : 10 minutes
+Management des scènes : 15 minutes
 
 Sur cette version il y a trois scenes disponibles, le menu général, le premier niveau et le deuxième niveau qui bouclent entre eux. Le management des scenes correspond au passage d'une scene à l'autre et à la sauvegarde du dernier niveau commencé dans les préférences joueur.
 
@@ -49,7 +49,9 @@ Menu principal : 15 minutes
 Affichage de deux boutons permettant de commencer le jeu ou de quitter. Si le jeu a déjà été commencé, le joueur reprendra au début du dernier niveau commencé.
 Ajout d'un bouton permettant de revenir au menu sur les scènes de jeu.
 
-Builds, tests sur téléphone et résolution de bugs : 25 minutes
+Builds, tests sur téléphone et résolution de bugs : 40 minutes
+
+Les builds sont assez longs et ça n'est pas vraiment une réalisation en soit, mais c'était nécessaire pour tester l'application correctement. C'est pour cette raison que cette partie est aussi longue.
 
 # Problèmes rencontrés
 
