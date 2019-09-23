@@ -66,8 +66,13 @@ Je pense que la partie déplacement du joueur et déplacement de la caméra n'es
 - Améliorer la classe "Obstacle" pour avoir plus de possibilités, notamment au niveau des rotations ou encore pour ne pas être obligé d'avoir une vitesse constante.
 - Ajouter d'autres objets obstacles de différentes formes.
 - Améliorer l'environnement du jeu (Skybox, matériaux, plateformes, obstacles, animations, sons).
-- Ajouter la possibilité du multi-joueur. (Ce qui risque de prendre beaucoup plus de temps que le reste).
-- Et bien d'autres choses auxquelles je n'ai pas encore eu le temps de penser.
+
+# Pour aller encore plus loin
+- Générer des niveaux procéduralement (je suis très fan de génération procédurale, donc à choisir, je ferai cela en premier)
+- Ajouter le multi-joueur
+- Ajouter la possibilité de jouer contre des I.A. ou contre des versions précédentes du parcours du joueur
+- Ajouter d'autres types de déplacements (sauter, glisser, s'accroupir...)
+
 
 # Conclusion
 Je pense avoir répondu aux problématiques principales qui étaient posées dans un temps très restreint. Je n'ai pas trouvé l'exercice trop difficile mais cela m'a tout de même demandé un peu de réflexion. 
