@@ -55,12 +55,12 @@ Les builds sont assez longs et ça n'est pas vraiment une réalisation en soit, 
 
 # Problèmes rencontrés
 
-Pour l'instant aucun point ne m'a réellement posé de difficultés, mais je pense avoir perdu un peu de temps sur le déplacement du personnage lorsque j'ai fait quelques essais avec les NavMesh.
-Le fonctionnement de la camera est très basique et il aurait peut-être été plus simple de la mettre directement en enfant du joueur.
-Je pense que la partie déplacement du joueur et déplacement de la caméra n'est pas tout à fait identique à ce que l'on peut voir dans le jeu de base, mon joueur effectue des angles droits quand il tourne et dans le jeu de base la caméra peut changer complétement de positions entre les différentes phases d'un niveau. Ayant déjà passé beaucoup de temps sur cette partie, j'ai préféré conserver des systèmes plus simples et faire le reste.
+Je pense avoir perdu un peu de temps sur le déplacement du personnage lorsque j'ai fait quelques essais avec les NavMesh.
+Je pense que la partie déplacement du joueur et déplacement de la caméra n'est pas tout à fait identique à ce que l'on peut voir dans le jeu de base, mon joueur effectue des angles droits quand il tourne et dans le jeu de base la caméra peut changer complétement de position entre les différentes phases d'un niveau. Ayant déjà passé beaucoup de temps sur cette partie, j'ai préféré conserver des systèmes plus simples et faire le reste.
 
 # Pour aller plus loin
 
+- Améliorer la gestion des mouvements et de la camera.
 - Ajouter des patterns sur le sol, pour aider le joueur à repérer les éléments dans l'environnement 3D. L'appréhension de la profondeur pouvant être difficile.
 - Ajouter des traits sur la barre de progrès permettant de voir les check points. (Bien que ça ne soit pas dans le jeu de base)
 - Améliorer la classe "Obstacle" pour avoir plus de possibilités, notamment au niveau des rotations ou encore pour ne pas être obligé d'avoir une vitesse constante.
