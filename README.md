@@ -10,7 +10,7 @@ J'ai passé un total de 4h30 sur le développement de ce prototype.
 
 # Jouer sur browser
 
-La version sur ce git hub correspond à mes 4.5 premières heures de développement, mais je n'étais pas totalement satisfait de moi-même et le sujet m'a plu donc j'ai continué, vous pouvez suivre le résultat actuel sur cette page : https://splifingald.itch.io/skyrace
+La version sur ce git hub correspond à mes 4.5 premières heures de développement, mais je n'étais pas totalement satisfait de moi-même et le sujet m'a plu donc j'ai continué, mes résultats actuels sont sur cette page : https://splifingald.itch.io/skyrace
 
 # Temps consacré et commentaires
 
